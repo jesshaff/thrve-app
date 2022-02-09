@@ -1,1 +1,1 @@
-# thrive-app
+# thrve-app
