@@ -1,16 +1,32 @@
-// shows relationships between different models
-//Starter code
-
 const User = require("./User");
-const Project = require("./Project");
+const sleepRating = require("./sleepRating.js");
+const moodRating = require("./moodRating");
+const healthRating = require("./healthRating");
 
-User.hasMany(Project, {
+User.hasMany(sleepRating, {
   foreignKey: "user_id",
   onDelete: "CASCADE",
 });
 
-Project.belongsTo(User, {
+User.hasMany(moodRating, {
+  foreignKey: "user_id",
+  onDelete: "CASCADE",
+});
+
+User.hasMany(healthRating, {
   foreignKey: "user_id",
 });
 
-module.exports = { User, Project };
+sleepRating.belongsTo(User, {
+  foreignKey: "user_id",
+});
+
+moodRating.belongsTo(User, {
+  foreignKey: "user_id",
+});
+
+healthRating.belongsTo(User, {
+  foreignKey: "user_id",
+});
+
+module.exports = { User, moodRating, sleepRating, healthRating };
