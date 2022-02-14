@@ -3,7 +3,9 @@ const express = require("express");
 const session = require("express-session");
 const routes = require("./controllers");
 
-const exphbs = require("express-handlebars");
+const sequelize = require("./config/connection");
+
+// const exphbs = require("express-handlebars");
 
 const db = require("./models");
 
@@ -18,17 +20,17 @@ app.use(express.static("public"));
 app.use(
   session({ secret: "feel better", resave: true, saveUninitialized: true })
 );
-app.use(passport.initialize());
+// app.use(passport.initialize());
 
-app.use(session(sess));
+// app.use(session(sess));
 
 // Handlebars
-app.engine(
-  "handlebars",
-  exphbs({
-    defaultLayout: "main",
-  })
-);
+// app.engine(
+//   "handlebars",
+//   exphbs({
+//     defaultLayout: "main",
+//   })
+// );
 app.set("view engine", "handlebars");
 
 // Routes
@@ -43,7 +45,7 @@ if (process.env.NODE_ENV === "test") {
 }
 
 // Starting the server, syncing our models ------------------------------------/
-db.sequelize.sync(syncOptions).then(function () {
+sequelize.sync(syncOptions).then(function () {
   app.listen(PORT, function () {
     console.log(
       "==> 🌎  Listening on port %s. Visit http://localhost:%s/ in your browser.",
