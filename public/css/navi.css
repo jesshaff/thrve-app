@@ -13,7 +13,7 @@ body .container {
   left: 30px;
   right: 0;
   transform: translateY(-50%);
-  margin: auto;
+  margin: auto; 
 }
 body .container .card {
   margin: 0 auto;
