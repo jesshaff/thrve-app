@@ -1,9 +1,9 @@
 const { Model, DataTypes } = require("sequelize");
 const sequelize = require("../config/connection");
 
-class moodRating extends Model {}
+class Mood extends Model {}
 
-moodRating.init(
+Mood.init(
   {
     date_added: {
       type: DataTypes.DATE,
@@ -11,7 +11,7 @@ moodRating.init(
       defaultValue: DataTypes.NOW,
     },
     rating: {
-      type: DataTypes.INTERGER,
+      type: DataTypes.INTEGER,
       allowNull: false,
     },
     user_id: {
@@ -26,8 +26,8 @@ moodRating.init(
     sequelize,
     freezeTableName: true,
     underscored: true,
-    modelName: "moodRating",
+    modelName: "Mood",
   }
 );
 
-module.exports = moodRating;
+module.exports = Mood;

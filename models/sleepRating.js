@@ -11,7 +11,7 @@ sleepRating.init(
       defaultValue: DataTypes.NOW,
     },
     rating: {
-      type: DataTypes.INTERGER,
+      type: DataTypes.INTEGER,
       allowNull: false,
     },
     user_id: {
