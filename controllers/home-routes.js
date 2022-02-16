@@ -1,13 +1,47 @@
 const router = require("express").Router();
-const { Mood } = require("../models");
+const { Mood, User } = require("../models");
 
-// GET all galleries for homepage
-router.get("/", async (req, res) => {
+// GET all moods -- prob dont need this route but good for testing
+router.get("/mood", async (req, res) => {
   try {
     const dbMoodData = await Mood.findAll();
     res.status(200).json(dbMoodData);
+    console.log(dbMoodData);
   } catch (err) {
     res.status(500).json(err);
+  }
+});
+
+//get all mood data for specified user -- will update this to display mood data for session ID user
+router.get("/mood/:id", async (req, res) => {
+  try {
+    const dbMoodData = await User.findByPk(req.params.id, {
+      include: [
+        {
+          model: Mood,
+          attributes: ["id", "date_added", "rating"],
+        },
+      ],
+    });
+
+    res.status(200).json(dbMoodData);
+  } catch (err) {
+    console.log(err);
+    res.status(500).json(err);
+  }
+});
+
+//posts a new mood rating - must be logged in and have a session id
+router.post("/mood", async (req, res) => {
+  try {
+    const newMood = await Mood.create({
+      ...req.body,
+      user_id: req.session.user_id,
+    });
+
+    res.status(200).json(newMood);
+  } catch (err) {
+    res.status(400).json(err);
   }
 });
 
