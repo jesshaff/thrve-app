@@ -1,16 +1,22 @@
+<<<<<<< HEAD:public/css/login.css
 body{
+=======
+// @import url("https://fonts.googleapis.com/css?family=Roboto");
+
+body {
+>>>>>>> 860408bd1f1f4db0688ee05a6cf95791d2326a66:public/css/login.scss
   all: initial;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   letter-spacing: 0.02em;
 }
 
-*{
+* {
   box-sizing: border-box;
 }
 
 @c-purple: #8338bf;
 
-main{
+main {
   position: fixed;
   top: 0;
   left: 0;
@@ -22,17 +28,17 @@ main{
   background: #3f2766;
 }
 
-.form{
+.form {
   display: flex;
   align-items: center;
   justify-content: center;
   position: relative;
   width: 400px;
   height: 400px;
-	flex-shrink: 0;
+  flex-shrink: 0;
   padding: 20px;
   border-radius: 5px;
-  &__loader{
+  &__loader {
     display: flex;
     position: absolute;
     left: 0;
@@ -44,7 +50,7 @@ main{
     z-index: -4;
     transition: all 0.5s ease;
   }
-  &__content{
+  &__content {
     text-align: center;
     display: flex;
     justify-content: center;
@@ -54,7 +60,7 @@ main{
     transform: translateY(10px);
     transition: all 0.5s ease 0.7s;
   }
-  &__cover{
+  &__cover {
     position: absolute;
     left: 0;
     top: 0;
@@ -64,9 +70,9 @@ main{
     border-radius: 7px;
     overflow: hidden;
     transition: all 0.3s ease 0.8s;
-    box-shadow: 0 0 0 0 rgba(0,0,0,0);
-    &:after{
-      content: '';
+    box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+    &:after {
+      content: "";
       position: absolute;
       left: 0;
       top: 0;
@@ -78,8 +84,8 @@ main{
       transition: all 1.5s ease 0.3s;
       transform: scale(0);
     }
-    &:before{
-      content: '';
+    &:before {
+      content: "";
       position: absolute;
       left: 0;
       top: 0;
@@ -94,53 +100,52 @@ main{
   }
 }
 
-body.on-start{
-  .form{
-    &__cover{
-      &:after{
-
+body.on-start {
+  .form {
+    &__cover {
+      &:after {
       }
-      &:before{
+      &:before {
         transform: scale(0.15);
       }
     }
   }
 }
 
-body.document-loaded{
-  .form{
-    &__loader{
+body.document-loaded {
+  .form {
+    &__loader {
       transform: scale(0);
       opacity: 0;
       visibility: hidden;
     }
-    &__content{
+    &__content {
       opacity: 1;
       transform: none;
     }
-    &__cover{
-      box-shadow: 0 20px 50px rgba(0,0,0,0.3);
-      &:after{
+    &__cover {
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
+      &:after {
         transform: scale(2);
       }
-      &:before{
+      &:before {
         transition: transform 2s ease, opacity 0.3s ease 0.8s;
         transform: scale(2);
-        opacity:0;
+        opacity: 0;
       }
     }
   }
 }
 
-h1{
+h1 {
   font-size: 40px;
-	margin: 15px 0 20px 0;
+  margin: 15px 0 20px 0;
   letter-spacing: 0.05em;
   color: #714cab;
-	font-weight: 700;
+  font-weight: 700;
 }
 
-.styled-button{
+.styled-button {
   -webkit-appearance: none;
   -webkit-user-select: none;
   cursor: pointer;
@@ -160,14 +165,14 @@ h1{
   background: #714cac;
   transition: all 0.3s ease;
   overflow: hidden;
-  &__real-text-holder{
+  &__real-text-holder {
     position: relative;
   }
-  &__real-text{
+  &__real-text {
     color: transparent;
     display: inline-block;
   }
-  &__text-holder{
+  &__text-holder {
     position: absolute;
     left: 0;
     top: 0;
@@ -178,7 +183,7 @@ h1{
     justify-content: center;
     transition: all 0.3s ease;
   }
-  &__moving-block{
+  &__moving-block {
     transition: all 0.3s ease;
     position: absolute;
     left: 0;
@@ -186,46 +191,46 @@ h1{
     height: 100%;
     width: 100%;
     overflow: hidden;
-    &.face{
-
+    &.face {
     }
-    &.back{
+    &.back {
       color: white;
       transform: translateX(-100%);
-      .styled-button__text-holder{
+      .styled-button__text-holder {
         transform: translateX(100%);
       }
     }
   }
-  &:hover, &:active{
-    box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+  &:hover,
+  &:active {
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
     background: #7a51bb;
-    .face{
+    .face {
       transform: translateX(100%);
-      .styled-button__text-holder{
+      .styled-button__text-holder {
         transform: translateX(-100%);
       }
     }
-    .back{
+    .back {
       transform: translateX(0);
-      .styled-button__text-holder{
+      .styled-button__text-holder {
         transform: translateX(0);
       }
     }
   }
-  &:active{
-    box-shadow: 0 0 5px rgba(0,0,0,0.3);
+  &:active {
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
   }
 }
 
-.styled-input{
+.styled-input {
   width: 100%;
   position: relative;
   margin-bottom: 25px;
-  border: 1px solid rgba(255,255,255,0.2);
+  border: 1px solid rgba(255, 255, 255, 0.2);
   border-radius: 3px;
   transition: all 0.3s ease;
-  &__circle{
+  &__circle {
     position: absolute;
     left: 0;
     top: 0;
@@ -234,8 +239,8 @@ h1{
     z-index: -2;
     overflow: hidden;
     border-radius: 3px;
-    &:after{
-      content: '';
+    &:after {
+      content: "";
       position: absolute;
       left: 16.5px;
       top: 19px;
@@ -243,12 +248,12 @@ h1{
       width: 14px;
       z-index: -2;
       border-radius: 50%;
-      background: rgba(255,255,255,0.15);
-      box-shadow: 0 0 10px rgba(255,255,255,0);
+      background: rgba(255, 255, 255, 0.15);
+      box-shadow: 0 0 10px rgba(255, 255, 255, 0);
       transition: transform 0.6s ease, opacity 1s ease;
     }
   }
-  &__input{
+  &__input {
     width: 100%;
     -webkit-appearance: none;
     font-size: 14px;
@@ -260,7 +265,7 @@ h1{
     font-weight: 600;
     letter-spacing: 0.035em;
   }
-  &__placeholder{
+  &__placeholder {
     position: absolute;
     left: 0;
     top: 0;
@@ -271,28 +276,28 @@ h1{
     z-index: -1;
     padding-left: 45px;
     color: white;
-    &-text{
+    &-text {
       perspective: 500px;
       display: inline-block;
-      .letter{
+      .letter {
         display: inline-block;
         vertical-align: middle;
         position: relative;
         animation: letterAnimOut 0.25s ease forwards;
         text-shadow: 0 0 5px;
-        &.active{
+        &.active {
           animation: letterAnimIn 0.25s ease forwards;
         }
       }
     }
   }
-  &:hover{
-    border-color: rgba(255,255,255,0.4);
+  &:hover {
+    border-color: rgba(255, 255, 255, 0.4);
   }
-  &.filled{
-    border-color: rgba(255,255,255,0.2);
-    .styled-input__circle{
-      &:after{
+  &.filled {
+    border-color: rgba(255, 255, 255, 0.2);
+    .styled-input__circle {
+      &:after {
         transform: scale(37);
         opacity: 0;
       }
@@ -300,73 +305,73 @@ h1{
   }
 }
 
-@keyframes letterAnimIn{
-  0%{
+@keyframes letterAnimIn {
+  0% {
     transform: translate(0, 0);
   }
-  25%{
-    transform: translate(0,10px);
+  25% {
+    transform: translate(0, 10px);
     color: red;
   }
-  45%{
-    transform: translate(0,10px);
+  45% {
+    transform: translate(0, 10px);
     opacity: 0;
     color: red;
   }
-  55%{
-    transform: translate(0,10px);
+  55% {
+    transform: translate(0, 10px);
     opacity: 0;
   }
-  56%{
-    transform: translate(-30px,-27px);
+  56% {
+    transform: translate(-30px, -27px);
     opacity: 0;
     color: #00ff6b;
   }
-  76%{
+  76% {
     color: #00ff6b;
     opacity: 1;
     transform: translate(-30px, -27px);
   }
-  100%{
+  100% {
     transform: translate(-30px, -27px);
     opacity: 1;
   }
 }
 
-@keyframes letterAnimOut{
-  0%{
+@keyframes letterAnimOut {
+  0% {
     transform: translate(-30px, -27px);
     opacity: 1;
   }
-  25%{
-    transform: translate(-30px,-40px);
+  25% {
+    transform: translate(-30px, -40px);
     opacity: 0;
   }
-  45%{
-    transform: translate(0,10px);
+  45% {
+    transform: translate(0, 10px);
     opacity: 0;
   }
-  55%{
-    transform: translate(0,10px);
+  55% {
+    transform: translate(0, 10px);
     opacity: 0;
     color: red;
   }
-  56%{
-    transform: translate(0,10px);
+  56% {
+    transform: translate(0, 10px);
     color: red;
   }
-  100%{
+  100% {
     transform: translate(0, 0);
   }
 }
 
-.spinner{
+.spinner {
   position: relative;
   margin: auto;
   width: 50px;
   height: 50px;
   transition: all 0.2s ease 0s;
-  &__circular{
+  &__circular {
     animation: rotate 1.5s linear infinite;
     animation-play-state: paused;
     transform-origin: center center;
@@ -377,7 +382,7 @@ h1{
     left: 0;
     margin: auto;
   }
-  &__path{
+  &__path {
     stroke-dasharray: 1, 200;
     stroke-dashoffset: 0;
     animation: dash 1.3s ease forwards 0.5s;
