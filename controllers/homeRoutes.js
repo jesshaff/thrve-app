@@ -1,5 +1,5 @@
 const router = require("express").Router();
-const { Mood, Health, Sleep, User } = require("../models");
+const { Mood, Health, Sleep, User, Post } = require("../models");
 const withAuth = require("../utils/auth");
 
 router.get("/profile", withAuth, async (req, res) => {
@@ -18,6 +18,14 @@ router.get("/profile", withAuth, async (req, res) => {
         {
           model: Health,
           attributes: ["rating", "date_added", "note"],
+        },
+        {
+          model: Post,
+          attributes: ["id", "title", "post_text", "date_added"],
+          include: {
+            model: User,
+            attributes: ["name"],
+          },
         },
       ],
     });

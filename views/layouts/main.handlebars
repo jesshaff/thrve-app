@@ -14,6 +14,17 @@
       <h1>
         User Registry
       </h1>
+
+      <nav>
+        <!-- Conditionally render login or logout links -->
+        {{#if logged_in}}
+          <a href="/profile">profile</a>
+          |
+          <button class="no-button" id="logout">logout</button>
+        {{else}}
+          <a href="/login">login</a>
+        {{/if}}
+      </nav>
     </header>
     <main class="container container-fluid mt-5">
       <!-- Render the contents of the sub layout here -->
@@ -22,6 +33,9 @@
     <footer>
 
     </footer>
+    {{#if logged_in}}
+      <script src="/js/logout.js"></script>
+    {{/if}}
   </body>
 
 </html>
