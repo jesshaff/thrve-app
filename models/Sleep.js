@@ -1,9 +1,9 @@
 const { Model, DataTypes } = require("sequelize");
 const sequelize = require("../config/connection");
 
-class sleepRating extends Model {}
+class Sleep extends Model {}
 
-sleepRating.init(
+Sleep.init(
   {
     date_added: {
       type: DataTypes.DATE,
@@ -26,8 +26,8 @@ sleepRating.init(
     sequelize,
     freezeTableName: true,
     underscored: true,
-    modelName: "sleepRating",
+    modelName: "Sleep",
   }
 );
 
-module.exports = sleepRating;
+module.exports = Sleep;

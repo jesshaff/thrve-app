@@ -1,9 +1,9 @@
 const { Model, DataTypes } = require("sequelize");
 const sequelize = require("../config/connection");
 
-class healthRating extends Model {}
+class Health extends Model {}
 
-healthRating.init(
+Health.init(
   {
     date_added: {
       type: DataTypes.DATE,
@@ -13,6 +13,11 @@ healthRating.init(
     rating: {
       type: DataTypes.INTEGER,
       allowNull: false,
+    },
+    note: {
+      type: DataTypes.STRING,
+      allowNull: true,
+      defaultValue: "",
     },
     user_id: {
       type: DataTypes.INTEGER,
@@ -26,8 +31,8 @@ healthRating.init(
     sequelize,
     freezeTableName: true,
     underscored: true,
-    modelName: "healthRating",
+    modelName: "health",
   }
 );
 
-module.exports = healthRating;
+module.exports = Health;

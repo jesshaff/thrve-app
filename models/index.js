@@ -1,9 +1,9 @@
 const User = require("./user");
-const sleepRating = require("./sleepRating.js");
+const Sleep = require("./Sleep.js");
 const Mood = require("./Mood");
-const healthRating = require("./healthRating");
+const Health = require("./Health");
 
-User.hasMany(sleepRating, {
+User.hasMany(Sleep, {
   foreignKey: "user_id",
   onDelete: "CASCADE",
 });
@@ -13,11 +13,11 @@ User.hasMany(Mood, {
   onDelete: "CASCADE",
 });
 
-User.hasMany(healthRating, {
+User.hasMany(Health, {
   foreignKey: "user_id",
 });
 
-sleepRating.belongsTo(User, {
+Sleep.belongsTo(User, {
   foreignKey: "user_id",
 });
 
@@ -25,8 +25,8 @@ Mood.belongsTo(User, {
   foreignKey: "user_id",
 });
 
-healthRating.belongsTo(User, {
+Health.belongsTo(User, {
   foreignKey: "user_id",
 });
 
-module.exports = { User, Mood, sleepRating, healthRating };
+module.exports = { User, Mood, Sleep, Health };
