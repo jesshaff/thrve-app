@@ -1,3 +1,5 @@
+// not sure how these are used differently than our user routes. everything is hard.
+// delete this comment
 const router = require("express").Router();
 const { User } = require("../models");
 
