@@ -57,11 +57,11 @@ router.post("/logout", (req, res) => {
   }
 });
 
-router.get("/profile", (req, res) => {
-  let userData = User.findAll.map((user) => user.get({ plain: true }));
-  console.log(userData);
-  console.log(err);
-  res.render("homepage", { userData });
-});
+// router.get("/profile", (req, res) => {
+//   let userData = User.findAll.map((user) => user.get({ plain: true }));
+//   console.log(userData);
+//   console.log(err);
+//   res.render("profile", { userData });
+// });
 
 module.exports = router;
