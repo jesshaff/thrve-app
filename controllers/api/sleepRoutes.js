@@ -1,15 +1,13 @@
 const router = require("express").Router();
-const { User, Health } = require("../models");
+const { User, Sleep } = require("../../models");
 
-//======================== HEALTH ROUTES ============================//
-
-router.get("/health", async (req, res) => {
+router.get("/", async (req, res) => {
   try {
     const dbMoodData = await User.findByPk(req.session.user_id, {
       include: [
         {
-          model: Health,
-          attributes: ["date_added", "rating", "note"],
+          model: Sleep,
+          attributes: ["date_added", "rating"],
         },
       ],
     });
@@ -21,15 +19,15 @@ router.get("/health", async (req, res) => {
   }
 });
 
-//posts a new Health rating - must be logged in and have a session id
-router.post("/health", async (req, res) => {
+//posts a new sleep rating - must be logged in and have a session id
+router.post("/", async (req, res) => {
   try {
-    const newHealth = await Health.create({
+    const newSleep = await Sleep.create({
       ...req.body,
       user_id: req.session.user_id,
     });
 
-    res.status(200).json(newHealth);
+    res.status(200).json(newSleep);
   } catch (err) {
     res.status(400).json(err);
   }
