@@ -5,8 +5,8 @@ const withAuth = require("../utils/auth");
 // get recent posts created to document health
 router.get("/", (req, res) => {
   Post.findAll({
-    attributes: ["id", "title", "post_text", "created_at"],
-    order: [["created_at", "DESC"]],
+    attributes: ["id", "title", "post_text", "date_added"],
+    order: [["date_added", "DESC"]],
     include: [
       {
         model: User,
@@ -26,7 +26,7 @@ router.get("/:id", (req, res) => {
     where: {
       id: req.params.id,
     },
-    attributes: ["id", "title", "post_text", "created_at"],
+    attributes: ["id", "title", "post_text", "date_added"],
     include: [
       {
         model: User,
