@@ -1,8 +1,9 @@
 @font-face {
-  font-family: 'Roboto';
+  font-family: "Roboto";
   font-style: normal;
   font-weight: 400;
-  src: url(https://fonts.gstatic.com/s/roboto/v29/KFOmCnqEu92Fr1Mu4mxP.ttf) format('truetype');
+  src: url(https://fonts.gstatic.com/s/roboto/v29/KFOmCnqEu92Fr1Mu4mxP.ttf)
+    format("truetype");
 }
 body {
   all: initial;
@@ -267,12 +268,12 @@ h1 {
   vertical-align: middle;
   position: relative;
   -webkit-animation: letterAnimOut 0.25s ease forwards;
-          animation: letterAnimOut 0.25s ease forwards;
+  animation: letterAnimOut 0.25s ease forwards;
   text-shadow: 0 0 5px;
 }
 .styled-input__placeholder-text .letter.active {
   -webkit-animation: letterAnimIn 0.25s ease forwards;
-          animation: letterAnimIn 0.25s ease forwards;
+  animation: letterAnimIn 0.25s ease forwards;
 }
 .styled-input:hover {
   border-color: rgba(255, 255, 255, 0.4);
@@ -409,9 +410,9 @@ h1 {
 }
 .spinner__circular {
   -webkit-animation: rotate 1.5s linear infinite;
-          animation: rotate 1.5s linear infinite;
+  animation: rotate 1.5s linear infinite;
   -webkit-animation-play-state: paused;
-          animation-play-state: paused;
+  animation-play-state: paused;
   transform-origin: center center;
   position: absolute;
   width: 100%;
@@ -424,12 +425,12 @@ h1 {
   stroke-dasharray: 1, 200;
   stroke-dashoffset: 0;
   -webkit-animation: dash 1.3s ease forwards 0.5s;
-          animation: dash 1.3s ease forwards 0.5s;
+  animation: dash 1.3s ease forwards 0.5s;
   opacity: 0;
   stroke-linecap: round;
   stroke: #7b23ff;
   -webkit-animation-play-state: running;
-          animation-play-state: running;
+  animation-play-state: running;
 }
 @-webkit-keyframes dash {
   0% {
