@@ -1,7 +1,12 @@
 const router = require("express").Router();
 
-const homeRoutes = require("./home-routes.js");
+const userRoutes = require("./userRoutes");
+const homeRoutes = require("./homeRoutes");
 
-router.use("/", homeRoutes);
+const healthRoutes = require("./healthRoutes");
+const moodRoutes = require("./moodRoutes");
+const sleepRoutes = require("./sleepRoutes");
+
+router.use("/", homeRoutes, userRoutes, healthRoutes, moodRoutes, sleepRoutes);
 
 module.exports = router;

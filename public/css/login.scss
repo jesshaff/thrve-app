@@ -1,8 +1,9 @@
 @font-face {
-  font-family: 'Roboto';
+  font-family: "Roboto";
   font-style: normal;
   font-weight: 400;
-  src: url(https://fonts.gstatic.com/s/roboto/v29/KFOmCnqEu92Fr1Mu4mxP.ttf) format('truetype');
+  src: url(https://fonts.gstatic.com/s/roboto/v29/KFOmCnqEu92Fr1Mu4mxP.ttf)
+    format("truetype");
 }
 body {
   all: initial;
@@ -21,6 +22,7 @@ main {
   display: flex;
   justify-content: center;
   align-items: center;
+  background: #3f2766;
 }
 .form {
   display: flex;
@@ -74,7 +76,7 @@ main {
   top: 0;
   height: 100%;
   width: 100%;
-  background-image: linear-gradient(to top, #714cab, #008cff);
+  background: #4d317a;
   z-index: -4;
   border-radius: 50%;
   transition: all 1.5s ease 0.3s;
@@ -120,21 +122,8 @@ h1 {
   font-size: 40px;
   margin: 15px 0 20px 0;
   letter-spacing: 0.05em;
-  color: white;
+  color: #714cab;
   font-weight: 700;
-}
-a {
-  color:white;
-}
-a:hover {
-  color: white;
-  background-color: transparent;
-  text-decoration: none;
-}
-a:active {
-  color: #008cff;
-  background-color: transparent;
-  text-decoration: none;
 }
 .styled-button {
   -webkit-appearance: none;
@@ -153,7 +142,7 @@ a:active {
   text-transform: uppercase;
   font-weight: 700;
   letter-spacing: 0.1em;
-  background: lightgrey;
+  background: #714cac;
   transition: all 0.3s ease;
   overflow: hidden;
 }
@@ -279,12 +268,12 @@ a:active {
   vertical-align: middle;
   position: relative;
   -webkit-animation: letterAnimOut 0.25s ease forwards;
-          animation: letterAnimOut 0.25s ease forwards;
+  animation: letterAnimOut 0.25s ease forwards;
   text-shadow: 0 0 5px;
 }
 .styled-input__placeholder-text .letter.active {
   -webkit-animation: letterAnimIn 0.25s ease forwards;
-          animation: letterAnimIn 0.25s ease forwards;
+  animation: letterAnimIn 0.25s ease forwards;
 }
 .styled-input:hover {
   border-color: rgba(255, 255, 255, 0.4);
@@ -421,9 +410,9 @@ a:active {
 }
 .spinner__circular {
   -webkit-animation: rotate 1.5s linear infinite;
-          animation: rotate 1.5s linear infinite;
+  animation: rotate 1.5s linear infinite;
   -webkit-animation-play-state: paused;
-          animation-play-state: paused;
+  animation-play-state: paused;
   transform-origin: center center;
   position: absolute;
   width: 100%;
@@ -436,12 +425,12 @@ a:active {
   stroke-dasharray: 1, 200;
   stroke-dashoffset: 0;
   -webkit-animation: dash 1.3s ease forwards 0.5s;
-          animation: dash 1.3s ease forwards 0.5s;
+  animation: dash 1.3s ease forwards 0.5s;
   opacity: 0;
   stroke-linecap: round;
   stroke: #7b23ff;
   -webkit-animation-play-state: running;
-          animation-play-state: running;
+  animation-play-state: running;
 }
 @-webkit-keyframes dash {
   0% {

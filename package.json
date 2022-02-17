@@ -1,14 +1,12 @@
 {
   "dependencies": {
-<<<<<<< HEAD
-    "bootstrap": "^5.1.3",
-=======
     "bcrypt": "^5.0.1",
+    "billboard.js": "^3.3.2",
     "dotenv": "^16.0.0",
->>>>>>> 860408bd1f1f4db0688ee05a6cf95791d2326a66
     "express": "^4.17.2",
     "express-handlebars": "^6.0.2",
     "express-session": "^1.17.2",
+    "connect-session-sequelize": "^7.0.4",
     "mysql": "^2.18.1",
     "mysql2": "^2.3.3",
     "passport": "^0.5.2",

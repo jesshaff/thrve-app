@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/public/css/dashboard.css">
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <title>THRVE</title>
+</head>
+
+<body>
+
+    <div class="grid">
+        <header class="header">
+            <i class="fas fa-bars header__menu"></i>
+            <div class="header__search">
+                <input class="header__input" placeholder="Search..." />
+            </div>
+            <div class="header__avatar">
+                <div class="dropdown">
+                    <ul class="dropdown__list">
+                        <li class="dropdown__list-item">
+                            <span class="dropdown__icon"><i class="far fa-user"></i></span>
+                            <span class="dropdown__title">my profile</span>
+                        </li>
+                        <li class="dropdown__list-item">
+                            <span class="dropdown__icon"><i class="fas fa-clipboard-list"></i></span>
+                            <span class="dropdown__title">my account</span>
+                        </li>
+                        <li class="dropdown__list-item">
+                            <span class="dropdown__icon"><i class="fas fa-sign-out-alt"></i></span>
+                            <span class="dropdown__title">log out</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </header>
+
+        <aside class="sidenav">
+            <div class="sidenav__brand">
+                <i class="fas fa-feather-alt sidenav__brand-icon"></i>
+                <a class="sidenav__brand-link" href="#">THR<span class="text-light">VE</span></a>
+                <i class="fas fa-times sidenav__brand-close"></i>
+            </div>
+            <div class="sidenav__profile">
+                <div class="sidenav__profile-avatar"></div>
+                <div class="sidenav__profile-title text-light">John Doe</div>
+            </div>
+            <div class="row row--align-v-center row--align-h-center">
+                <ul class="navList">
+                    <li class="navList__heading">Health<i class="far fa-file-alt"></i></li>
+                    <li>
+                        <div class="navList__subheading row row--align-v-center">
+                            <span class="navList__subheading-icon"></span>
+                            <span class="navList__subheading-title">Mood</span>
+                        </div>
+                        <ul class="subList subList--hidden">
+                            <li class="subList__item">Notes</li>
+                            <li class="subList__item">Appointment</li>
+                            <li class="subList__item">Counseling</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <div class="navList__subheading row row--align-v-center">
+                            <span class="navList__subheading-icon"></span>
+                            <span class="navList__subheading-title">Sleep</span>
+                        </div>
+                        <ul class="subList subList--hidden">
+                            <li class="subList__item">Notes</li>
+                            <li class="subList__item">Sleep Pattern</li>
+                            <li class="subList__item">Alarm</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <div class="navList__subheading row row--align-v-center">
+                            <span class="navList__subheading-icon"></span>
+                            <span class="navList__subheading-title">Weight</span>
+                        </div>
+                        <ul class="subList subList--hidden">
+                            <li class="subList__item">Notes</li>
+                            <li class="subList__item">Goal</li>
+                            <li class="subList__item">Diet</li>
+
+                        </ul>
+                    </li>
+
+                    <li class="navList__heading">messages</li>
+                    <li>
+                        <div class="navList__subheading row row--align-v-center">
+                            <span class="navList__subheading-icon"></span>
+                            <span class="navList__subheading-title">inbox</span>
+                        </div>
+                        <ul class="subList subList--hidden">
+                            <li class="subList__item">primary</li>
+                            <li class="subList__item">social</li>
+                            <li class="subList__item">promotional</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <div class="navList__subheading row row--align-v-center">
+                            <span class="navList__subheading-icon"></span>
+                            <span class="navList__subheading-title">unread</span>
+                        </div>
+                        <ul class="subList subList--hidden">
+                            <li class="subList__item">primary</li>
+                            <li class="subList__item">social</li>
+                            <li class="subList__item">promotional</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <div class="navList__subheading row row--align-v-center">
+                            <span class="navList__subheading-icon"><i class="fas fa-book-open"></i></span>
+                            <span class="navList__subheading-title">archives</span>
+                        </div>
+                        <ul class="subList subList--hidden">
+                            <li class="subList__item">primary</li>
+                            <li class="subList__item">social</li>
+                            <li class="subList__item">promotional</li>
+                        </ul>
+                    </li>
+
+
+                    <li class="navList__heading">statistics</li>
+                    <li>
+                        <div class="navList__subheading row row--align-v-center">
+                            <span class="navList__subheading-icon"></span>
+                            <span class="navList__subheading-title">Mood</span>
+                        </div>
+                        <ul class="subList subList--hidden">
+                            <li class="subList__item">mortgage</li>
+                            <li class="subList__item">investments</li>
+                            <li class="subList__item">spend log</li>
+                            <li class="subList__item">owed</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <div class="navList__subheading row row--align-v-center">
+                            <span class="navList__subheading-icon"></span>
+                            <span class="navList__subheading-title">Sleep</span>
+                        </div>
+                        <ul class="subList subList--hidden">
+                            <li class="subList__item">last month</li>
+                            <li class="subList__item">bi-weekly</li>
+                            <li class="subList__item">yesterday</li>
+                            <li class="subList__item">today</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <div class="navList__subheading row row--align-v-center">
+                            <span class="navList__subheading-icon"></span>
+                            <span class="navList__subheading-title">Weight</span>
+                        </div>
+                        <ul class="subList subList--hidden">
+                            <li class="subList__item">amsterdam</li>
+                            <li class="subList__item">buenos aires</li>
+                            <li class="subList__item">cambodia</li>
+                            <li class="subList__item">greenland</li>
+                        </ul>
+                    </li>
+
+                    <!-- <li class="navList__heading">Events<i class="fas fa-calendar-alt"></i></li>
+                    <li>
+                        <div class="navList__subheading row row--align-v-center">
+                            <span class="navList__subheading-icon"><i class="fas fa-wine-glass-alt"></i></span>
+                            <span class="navList__subheading-title">weddings</span>
+                        </div>
+                        <ul class="subList subList--hidden">
+                            <li class="subList__item">past</li>
+                            <li class="subList__item">present</li>
+                            <li class="subList__item">future</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <div class="navList__subheading row row--align-v-center">
+                            <span class="navList__subheading-icon"><i class="fas fa-school"></i></span>
+                            <span class="navList__subheading-title">playdates</span>
+                        </div>
+                        <ul class="subList subList--hidden">
+                            <li class="subList__item">weirdos</li>
+                            <li class="subList__item">smarties</li>
+                            <li class="subList__item">nerds</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <div class="navList__subheading row row--align-v-center">
+                            <span class="navList__subheading-icon"><i class="fas fa-users"></i></span>
+                            <span class="navList__subheading-title">networking</span>
+                        </div>
+                        <ul class="subList subList--hidden">
+                            <li class="subList__item">tech</li>
+                            <li class="subList__item">automotive</li>
+                            <li class="subList__item">UX research</li>
+                            <li class="subList__item">development</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div> -->
+        </aside>
+
+        <main class="main">
+            <div class="main-header">
+                <div class="main-header__intro-wrapper">
+                    <div class="main-header__welcome">
+                        <div class="main-header__welcome-title text-light">Welcome, <strong>{{user.name}}</strong>
+                        </div>
+                        <div class="main-header__welcome-subtitle text-light">How are you today?</div>
+                    </div>
+                    <div class="quickview">
+                        <div class="quickview__item">
+
+                        </div>
+                        <div class="quickview__item">
+
+                            <div class="quickview__item-description">
+
+
+                            </div>
+                        </div>
+                        <div class="quickview__item">
+
+                            <div class="quickview__item-description">
+                                <i class="fas fa-map-marker-alt"></i>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="main-overview">
+                <div class="overviewCard">
+                    <div class="overviewCard-icon overviewCard-angry">
+                        <i class="far fa-file-alt"></i>
+                    </div>
+                    <div class="overviewCard-description">
+                        <h3 class="overviewCard-title text-light">I feel <strong>Angry!!</strong></h3>
+                        <p class="overviewCard-subtitle"></p>
+                    </div>
+                </div>
+                <div class="overviewCard">
+                    <div class="overviewCard-icon overviewCard-icon-sad">
+                        <i class="far fa-calendar-check"></i>
+                    </div>
+                    <div class="overviewCard-description">
+                        <h3 class="overviewCard-title text-light">I feel <strong>Sad!!</strong></h3>
+                        <p class="overviewCard-subtitle"></p>
+                    </div>
+                </div>
+                <div class="overviewCard">
+                    <div class="overviewCard-icon overviewCard-icon-scared">
+                        <i class="far fa-envelope"></i>
+                    </div>
+                    <div class="overviewCard-description">
+                        <h3 class="overviewCard-title text-light">I feel <strong>Scared!!</strong></h3>
+                        <p class="overviewCard-subtitle"></p>
+                    </div>
+                </div>
+                <div class="overviewCard">
+                    <div class="overviewCard-icon overviewCard-icon-happy">
+                        <i class="far fa-file-image"></i>
+                    </div>
+                    <div class="overviewCard-description">
+                        <h3 class="overviewCard-title text-light">I feel <strong>Happy!!</strong></h3>
+                        <p class="overviewCard-subtitle"></p>
+                    </div>
+                </div>
+
+            </div> <!-- /.main__overview -->
+            <div class="main__cards">
+                <div class="card">
+                    <div class="card__header">
+                        <div class="card__header-title text-light">Your <strong>Diary</strong>
+                            <a href="#" class="card__header-link text-bold">View All</a>
+                        </div>
+
+                    </div>
+                    <div class="card__main">
+                        <div class="card__row">
+                            <div class="card__icon"></div>
+                            <div class="card__time">
+                                <div>today</div>
+                            </div>
+                            <div class="card__detail">
+                                <div class="card__source text-bold">Name Placeholder</div>
+                                <div class="card__description">today was a rough day!!
+                                </div>
+                                <div class="card__note">meditated for 1hr</div>
+                            </div>
+                        </div>
+                        <div class="card__row">
+                            <div class="card__icon"></div>
+                            <div class="card__time">
+                                <div>Tuesday</div>
+                            </div>
+                            <div class="card__detail">
+                                <div class="card__source text-bold">Name Placeholder</div>
+                                <div class="card__description">I did not feel like being bothered today!!</div>
+                                <div class="card__note">Angry most of the day!!</div>
+                            </div>
+                        </div>
+                        <div class="card__row">
+                            <div class="card__icon"></div>
+                            <div class="card__time">
+                                <div>Thursday</div>
+                            </div>
+                            <div class="card__detail">
+                                <div class="card__source text-bold">Appointment with Dr. Higgins</div>
+                                <div class="card__description">3rd therapy visit. Need to discuss recent mood
+                                    activity of anxiety and sad days.
+                                </div>
+                                <div class="card__note">3:30pm, Changing Lives Health Center </div>
+                            </div>
+                        </div>
+                        <div class="card__row">
+                            <div class="card__icon"></div>
+                            <div class="card__time">
+                                <div>Friday</div>
+                            </div>
+                            <div class="card__detail">
+                                <div class="card__source text-bold">Today was an ok day!</div>
+                                <div class="card__description">I felt more cheerful than I have in a while!
+                                </div>
+                                <div class="card__note">spent time with family and friends</div>
+                            </div>
+                        </div>
+                        <div class="card__row">
+                            <div class="card__icon"></div>
+                            <div class="card__time">
+                                <div>Saturday</div>
+                            </div>
+                            <div class="card__detail">
+                                <div class="card__source text-bold">Awesome day</div>
+                                <div class="card__description">I had fun today at the park!
+                                </div>
+                                <div class="card__note">Enjoyed a day of yoga and meditation</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- <div class="card">
+                    <div class="card__header">
+                        <div class="card__header-title text-light">Recent <strong>Documents</strong>
+                            <a href="#" class="card__header-link text-bold">View All</a>
+                        </div>
+                        <div class="settings">
+                            <div class="settings__block"><i class="fas fa-edit"></i></div>
+                            <div class="settings__block"><i class="fas fa-cog"></i></div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="documents">
+                            <div class="document">
+                                <div class="document__img"></div>
+                                <div class="document__title">tesla-patents</div>
+                                <div class="document__date">07/16/2018</div>
+                            </div>
+                            <div class="document">
+                                <div class="document__img"></div>
+                                <div class="document__title">yearly-budget</div>
+                                <div class="document__date">09/04/2018</div>
+                            </div>
+                            <div class="document">
+                                <div class="document__img"></div>
+                                <div class="document__title">top-movies</div>
+                                <div class="document__date">10/10/2018</div>
+                            </div>
+                            <div class="document">
+                                <div class="document__img"></div>
+                                <div class="document__title">trip-itinerary</div>
+                                <div class="document__date">11/01/2018</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card card--finance">
+                    <div class="card__header">
+                        <div class="card__header-title text-light">Monthly <strong>Spending</strong>
+                            <a href="#" class="card__header-link text-bold">View All</a>
+                        </div>
+                        <div class="settings">
+                            <div class="settings__block"><i class="fas fa-edit"></i></div>
+                            <div class="settings__block"><i class="fas fa-cog"></i></div>
+                        </div>
+                    </div>
+                    <div id="chartdiv"></div>
+                </div>
+            </div> <!-- /.main-cards -->
+        </main>
+
+
+        <footer class="footer">
+            <p><span class="footer__copyright">&copy;</span> THRVE</p>
+            <p>Developed <i class="fas fa-heart footer__icon"></i> by <a
+                    href="https://www.linkedin.com/in/matt-holland/" target="_blank" class="footer__signature">Jesse,
+                    Jessica, Javis & Alexander
+                </a></p>
+        </footer>
+    </div>
+
+    <script src="/public/js/dashboard.js"></script>
+</body>
+
+</html>
