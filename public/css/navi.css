@@ -1,10 +1,5 @@
-@import url(https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz:400,700,300);
 body {
   font-family: "Yanone Kaffeesatz", sans-serif;
-}
-body a {
-  text-decoration: none;
-  color: white;
 }
 body .container {
   width: 938px;
@@ -25,7 +20,6 @@ body .container .card {
   position: relative;
   transition: all 0.2s;
   cursor: pointer;
-  opacity: 0.5;
   box-shadow: 0px 17px 46px -10px #777777;
   height: 470px;
   border-radius: 14px;
@@ -43,13 +37,13 @@ body .container .card:nth-of-type(3) {
           animation: intro 1s 0.3s forwards;
 }
 body .container .card:nth-of-type(1) {
-  background: -webkit-linear-gradient(45deg, #c96881 0%, #f7b695 100%);
+  background: -webkit-linear-gradient(45deg, #b93455 0%, #f3a69c 100%);
 }
 body .container .card:nth-of-type(2) {
-  background: -webkit-linear-gradient(45deg, #6B6ECC 0%, #89BFDF 100%);
+  background: -webkit-linear-gradient(45deg, #363abb 0%, #79b7db 100%);
 }
 body .container .card:nth-of-type(3) {
-  background: -webkit-linear-gradient(45deg, #81B77B 0%, #A3E3C3 100%);
+  background: -webkit-linear-gradient(45deg, #4eb942 0%, #99fdcb 100%);
 }
 body .container .card:hover .card_inner__header img {
   left: -50px;
@@ -59,8 +53,8 @@ body .container .card:hover .card_inner__cta button {
   transform: scale(1);
 }
 body .container .card:nth-of-type(1):hover .card_inner__circle img {
-  -webkit-animation: launch 1s forwards;
-          animation: launch 1s forwards;
+  -webkit-animation: spin 1s forwards;
+          animation: spin 1s forwards;
 }
 body .container .card:nth-of-type(1) .card_inner__circle img {
   top: 22px;
@@ -74,8 +68,8 @@ body .container .card:nth-of-type(2) .card_inner__circle img {
   top: 22px;
 }
 body .container .card:nth-of-type(3):hover .card_inner__circle img {
-  -webkit-animation: fly 1s forwards;
-          animation: fly 1s forwards;
+  -webkit-animation: spin 1s forwards;
+          animation: spin 1s forwards;
 }
 body .container .card:nth-of-type(3) .card_inner__circle img {
   top: 22px;
@@ -121,23 +115,18 @@ body .container .card_inner__header img {
 body .container .card_inner__content {
   padding: 20px;
 }
-body .container .card_inner__content .price {
-  color: white;
-  font-weight: 800;
-  font-size: 70px;
-  text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.42);
-}
+
 body .container .card_inner__content .text {
-  color: rgba(255, 255, 255, 0.6);
+  color: #ffffffd2;
   font-weight: 100;
   margin-top: 20px;
-  font-size: 13px;
+  font-size: 20px;
   line-height: 16px;
 }
 body .container .card_inner__content .title {
   font-weight: 800;
   text-transform: uppercase;
-  color: rgba(255, 255, 255, 0.64);
+  color: #ffffffea;
   margin-top: 40px;
   font-size: 25px;
   letter-spacing: 1px;
@@ -150,103 +139,8 @@ body .container .card_inner__cta {
   margin: auto;
   width: 200px;
 }
-body .container .card_inner__cta button {
-  padding: 16px;
-  box-shadow: 0px 0px 40px 4px #F76583, 0px 0px 0px 2px rgba(255, 255, 255, 0.19) inset;
-  width: 100%;
-  background: -webkit-linear-gradient(-90deg, #fe5e7d 0%, #e5375b 100%);
-  border: none;
-  font-family: "Yanone Kaffeesatz", sans-serif;
-  color: white;
-  outline: none;
-  font-size: 20px;
-  border-radius: 6px;
-  transform: scale(0.94);
-  cursor: pointer;
-  transition: box-shadow 0.3s, transform 0.3s 0.1s;
-}
-body .container .card_inner__cta button span {
-  text-shadow: 0px 4px 18px #BA3F57;
-}
-body .container .card_inner__cta button:hover {
-  box-shadow: 0px 0px 60px 8px #F76583, 0px 0px 0px 2px rgba(255, 255, 255, 0.19) inset;
-}
 
-@-webkit-keyframes launch {
-  0% {
-    left: 1px;
-  }
-  25% {
-    top: -50px;
-    left: 1px;
-  }
-  50% {
-    left: -100px;
-  }
-  75% {
-    top: 100px;
-    transform: rotate(40deg);
-  }
-  100% {
-    left: 1px;
-  }
-}
 
-@keyframes launch {
-  0% {
-    left: 1px;
-  }
-  25% {
-    top: -50px;
-    left: 1px;
-  }
-  50% {
-    left: -100px;
-  }
-  75% {
-    top: 100px;
-    transform: rotate(40deg);
-  }
-  100% {
-    left: 1px;
-  }
-}
-@-webkit-keyframes fly {
-  0% {
-    left: 0px;
-  }
-  25% {
-    top: -50px;
-    left: 50px;
-  }
-  50% {
-    left: -130px;
-  }
-  75% {
-    top: 60px;
-  }
-  100% {
-    left: 0px;
-  }
-}
-@keyframes fly {
-  0% {
-    left: 0px;
-  }
-  25% {
-    top: -50px;
-    left: 50px;
-  }
-  50% {
-    left: -130px;
-  }
-  75% {
-    top: 60px;
-  }
-  100% {
-    left: 0px;
-  }
-}
 @-webkit-keyframes spin {
   0% {
     transform: rotate(0deg);

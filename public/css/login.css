@@ -21,7 +21,6 @@ main {
   display: flex;
   justify-content: center;
   align-items: center;
-  background: #3f2766;
 }
 .form {
   display: flex;
@@ -75,7 +74,7 @@ main {
   top: 0;
   height: 100%;
   width: 100%;
-  background: #4d317a;
+  background-image: linear-gradient(to top, #714cab, #008cff);
   z-index: -4;
   border-radius: 50%;
   transition: all 1.5s ease 0.3s;
@@ -121,8 +120,21 @@ h1 {
   font-size: 40px;
   margin: 15px 0 20px 0;
   letter-spacing: 0.05em;
-  color: #714cab;
+  color: white;
   font-weight: 700;
+}
+a {
+  color:white;
+}
+a:hover {
+  color: white;
+  background-color: transparent;
+  text-decoration: none;
+}
+a:active {
+  color: #008cff;
+  background-color: transparent;
+  text-decoration: none;
 }
 .styled-button {
   -webkit-appearance: none;
@@ -141,7 +153,7 @@ h1 {
   text-transform: uppercase;
   font-weight: 700;
   letter-spacing: 0.1em;
-  background: #714cac;
+  background: lightgrey;
   transition: all 0.3s ease;
   overflow: hidden;
 }
