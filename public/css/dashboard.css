@@ -335,8 +335,11 @@ html, body {
     height: 250px;
     color: #FFF;
     background-size: cover;
-    background-image: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/1609106/lake-shadow-water.jpg");
+    background-position: center;
+    background-image: url("/public/images/relax.JPG");
+    background-size: cover;
     margin-bottom: 20px;
+    background-repeat: no-repeat;
   }
   .main-header__intro-wrapper {
     display: flex;
@@ -344,23 +347,26 @@ html, body {
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
-    height: 160px;
+    height: 320px;
     padding: 12px 30px;
     background: rgba(255, 255, 255, 0.12);
-    font-size: 26px;
+    font-size: 40px;
     letter-spacing: 1px;
   }
   .main-header__welcome {
     display: flex;
     flex-direction: column;
     align-items: center;
+    color: #3f2766;
   }
   .main-header__welcome-title {
     margin-bottom: 8px;
-    font-size: 26px;
+    font-size: 30px;
+    color: #3f2766;
+
   }
   .main-header__welcome-subtitle {
-    font-size: 18px;
+    font-size: 20px;
   }
   
   .quickview {
@@ -398,6 +404,8 @@ html, body {
     background-color: #FFF;
     transform: translateY(0);
     transition: all 0.3s;
+    border-radius: 30px;
+    
   }
   .overviewCard-icon {
     display: flex;
@@ -438,6 +446,7 @@ html, body {
     font-size: 18px;
     color: #1BBAE1;
     margin: 0;
+    margin-right: 60px;
   }
   .overviewCard-subtitle {
     margin: 2px;
