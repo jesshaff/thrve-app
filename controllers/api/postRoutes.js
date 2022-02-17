@@ -1,6 +1,6 @@
 const router = require("express").Router();
-const { Post, User } = require("../models");
-const withAuth = require("../utils/auth");
+const { Post, User } = require("../../models");
+const withAuth = require("../../utils/auth");
 
 // get recent posts created to document health
 router.get("/", (req, res) => {

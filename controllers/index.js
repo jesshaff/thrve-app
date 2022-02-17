@@ -4,20 +4,15 @@ const userRoutes = require("./userRoutes");
 const homeRoutes = require("./homeRoutes");
 const dashboardRoutes = require("./dashboardRoutes");
 
-const healthRoutes = require("./healthRoutes");
-const moodRoutes = require("./moodRoutes");
-const sleepRoutes = require("./sleepRoutes");
-const postRoutes = require("./postRoutes");
+// const healthRoutes = require("./healthRoutes");
+// const moodRoutes = require("./moodRoutes");
+// const sleepRoutes = require("./sleepRoutes");
+// const postRoutes = require("./postRoutes");
 
-router.use(
-  "/",
-  homeRoutes,
-  userRoutes,
-  dashboardRoutes,
-  healthRoutes,
-  moodRoutes,
-  sleepRoutes,
-  postRoutes
-);
+const apiRoutes = require("./api");
+
+router.use("/", homeRoutes, userRoutes, dashboardRoutes);
+
+router.use("/api", apiRoutes);
 
 module.exports = router;

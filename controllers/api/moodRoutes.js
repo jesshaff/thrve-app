@@ -1,8 +1,8 @@
 const router = require("express").Router();
-const { Mood, User } = require("../models");
+const { Mood, User } = require("../../models");
 
 //get all mood data for logged in user
-router.get("/mood", async (req, res) => {
+router.get("/", async (req, res) => {
   try {
     const dbMoodData = await User.findByPk(req.session.user_id, {
       include: [
@@ -21,7 +21,7 @@ router.get("/mood", async (req, res) => {
 });
 
 //posts a new mood rating for logged in user
-router.post("/mood", async (req, res) => {
+router.post("/", async (req, res) => {
   try {
     const newMood = await Mood.create({
       ...req.body,
