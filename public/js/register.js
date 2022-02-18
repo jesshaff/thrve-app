@@ -58,26 +58,27 @@ setTimeout(function () {
   document.body.classList.add("document-loaded");
 }, 1800);
 
-// ----------- Login event handlers --------------
+// ----------- Register event handlers --------------
 
-const loginFormHandler = async (event) => {
+const registerFormHandler = async (event) => {
   // Stop the browser from submitting the form so we can do so with JavaScript
   event.preventDefault();
 
   // Gather the data from the form elements on the page
-  const email = document.querySelector("#email-login").value.trim();
-  const password = document.querySelector("#password-login").value.trim();
+  const email = document.querySelector("#name-register").value.trim();
+  const email = document.querySelector("#email-register").value.trim();
+  const password = document.querySelector("#password-register").value.trim();
 
-  if (email && password) {
+  if (name && email && password) {
     // Send the e-mail and password to the server
-    const response = await fetch("/login", {
+    const response = await fetch("/register", {
       method: "POST",
-      body: JSON.stringify({ email, password }),
+      body: JSON.stringify({ name, email, password }),
       headers: { "Content-Type": "application/json" },
     });
 
     if (response.ok) {
-      document.location.replace("/");
+      document.location.replace("/navi");
     } else {
       alert("Failed");
     }
@@ -85,5 +86,5 @@ const loginFormHandler = async (event) => {
 };
 var el = document.getElementById("submit");
 if (el) {
-  el.addEventListener("click", loginFormHandler);
+  el.addEventListener("click", registerFormHandler);
 }
