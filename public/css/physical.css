@@ -1,5 +1,10 @@
 * { box-sizing: border-box; }
 
+body{
+  font-family: "Yanone Kaffeesatz", sans-serif;
+  background: -webkit-linear-gradient(45deg, #b93455 0%, #f3a69c 100%);
+}
+
 .container {
   background-image: url("https://www.toptal.com/designers/subtlepatterns/patterns/concrete-texture.png");
   display: flex;
