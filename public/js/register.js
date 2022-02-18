@@ -58,7 +58,7 @@ setTimeout(function () {
   document.body.classList.add("document-loaded");
 }, 1800);
 
-// ----------- Login event handlers --------------
+// ----------- Register event handlers --------------
 
 const registerFormHandler = async (event) => {
   // Stop the browser from submitting the form so we can do so with JavaScript
