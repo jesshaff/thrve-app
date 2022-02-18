@@ -3,7 +3,7 @@ const { User, Post } = require("../models");
 const withAuth = require("../utils/auth");
 
 // get all posts
-router.get("/dashboard", withAuth, (req, res) => {
+router.get("/", withAuth, (req, res) => {
   Post.findAll({
     where: {
       user_id: req.session.user_id,
