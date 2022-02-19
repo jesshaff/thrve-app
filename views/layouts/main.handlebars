@@ -7,8 +7,44 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>THRVE</title>
     {{!-- <link rel="stylesheet" href="/css/jass.css" /> --}}
+      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
   </head>
-
+    <nav class="navbar navbar-expand-lg navbar-dark">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="">
+          <img
+            src="https://cdn-icons-png.flaticon.com/512/1478/1478929.png"
+            alt=""
+            width="70"
+            height="70"
+          /></a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link active h5" href="/navi">Navi</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active h5" href="/">Profile</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active h5" id="logout" href="">Log Out</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
   {{!-- <body> --}}
     {{!-- <header class="display-flex justify-space-between align-center p-2">
       <h1>
@@ -22,7 +58,7 @@
           |
           <button class="no-button" id="logout">logout</button>
         {{else}}
-          <a href="/login"></a>
+          {{!-- <a href="/login">login</a> --}}
         {{/if}}
       {{!-- </nav> --}}
     {{!-- </header> --}}
@@ -34,9 +70,9 @@
     <footer>
 
     </footer>
-    {{#if logged_in}}
+    
       <script src="/js/logout.js"></script>
-    {{/if}}
+
   </body>
 
 </html>

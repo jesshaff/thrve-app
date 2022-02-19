@@ -50,15 +50,17 @@ router.post("/login", async (req, res) => {
   }
 });
 
-router.post("/logout", (req, res) => {
-  if (req.session.logged_in) {
+router.post("/logout", async (req, res) => {
+  try {
+    req.session.logged_in = false;
     req.session.destroy(() => {
       res.status(204).end();
     });
-  } else {
-    res.status(404).end();
+  } catch (err) {
+    res.status(400).json(err);
   }
 });
+
 // registration route
 router.post("/register", async (req, res) => {
   try {
