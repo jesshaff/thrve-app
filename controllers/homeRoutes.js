@@ -34,7 +34,7 @@ router.get("/profile", withAuth, async (req, res) => {
     const user = userData.map((user) => user.get({ plain: true }));
 
     // Pass serialized data and session flag into template
-    res.render("profile", {
+    res.render("navi", {
       user,
       logged_in: req.session.logged_in,
     });
@@ -42,15 +42,26 @@ router.get("/profile", withAuth, async (req, res) => {
     res.status(500).json(err);
   }
 });
-// Redirect working, not much else...
+// Login Redirect
 router.get("/login", (req, res) => {
   // If the user is already logged in, redirect the request to another route
   if (req.session.logged_in) {
-    res.redirect("/profile");
+    res.redirect("/navi");
     return;
   }
 
   res.render("login");
+});
+
+// Navi Render
+router.get("/navi", (req, res) => {
+  // If the user is already logged in, redirect the request to another route
+  if (!req.session.logged_in) {
+    res.redirect("/login");
+    return;
+  }
+
+  res.render("navi");
 });
 
 module.exports = router;
