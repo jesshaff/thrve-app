@@ -21,6 +21,25 @@ router.get("/", async (req, res) => {
   }
 });
 
+//get ALL health data -- testing
+router.get("/all", async (req, res) => {
+  try {
+    const dbMoodData = await User.findAll({
+      include: [
+        {
+          model: Health,
+          attributes: ["date_added", "rating", "note"],
+        },
+      ],
+    });
+
+    res.status(200).json(dbMoodData);
+  } catch (err) {
+    console.log(err);
+    res.status(500).json(err);
+  }
+});
+
 //posts a new Health rating - must be logged in and have a session id
 router.post("/", async (req, res) => {
   try {

@@ -1,5 +1,3 @@
-const { json } = require("express/lib/response");
-
 const ratingsFormHandler = async (value) => {
   // Stop the browser from submitting the form so we can do so with JavaScript
 
@@ -10,7 +8,7 @@ const ratingsFormHandler = async (value) => {
   if (window.location.pathname === "/mood") {
     const response = await fetch("/api/mood", {
       method: "POST",
-      body: JSON.stringify(rating),
+      body: JSON.stringify({ rating }),
       headers: { "Content-Type": "application/json" },
     });
 
@@ -22,7 +20,7 @@ const ratingsFormHandler = async (value) => {
   } else if (window.location.pathname === "/physical") {
     const response = await fetch("/api/health", {
       method: "POST",
-      body: json.stringify({ value }),
+      body: JSON.stringify({ rating }),
       headers: { "Content-Type": "application/json" },
     });
 
@@ -34,7 +32,7 @@ const ratingsFormHandler = async (value) => {
   } else if (window.location.pathname === "/sleep") {
     const response = await fetch("/api/sleep", {
       method: "POST",
-      body: JSON.stringify(rating),
+      body: JSON.stringify({ rating }),
       headers: { "Content-Type": "application/json" },
     });
 
@@ -45,6 +43,7 @@ const ratingsFormHandler = async (value) => {
     }
   }
   console.log(window.location.pathname);
+  console.log(response);
 };
 //Event listener on buttons to call the ratings handler function above.
 // var el = document.querySelectorAll("label");
@@ -59,7 +58,7 @@ function clickHandler() {
   for (var i in Object.keys(buttons)) {
     buttons[i].onclick = function () {
       var value = this.id;
-      console.log(this.id);
+      console.log(value);
       ratingsFormHandler(value);
     };
   }
