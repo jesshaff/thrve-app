@@ -53,6 +53,16 @@ router.get("/login", (req, res) => {
   res.render("login");
 });
 
+router.get("/register", (req, res) => {
+  // If the user is already logged in, redirect the request to another route
+  if (req.session.logged_in) {
+    res.redirect("/navi");
+    return;
+  }
+
+  res.render("register");
+});
+
 // Navi Render
 router.get("/navi", (req, res) => {
   // If the user is already logged in, redirect the request to another route
@@ -62,6 +72,36 @@ router.get("/navi", (req, res) => {
   }
 
   res.render("navi");
+});
+
+router.get("/physical", async (req, res) => {
+  // If the user is already logged in, redirect the request to another route
+  if (!req.session.logged_in) {
+    res.redirect("/login");
+    return;
+  }
+
+  res.render("ratings");
+});
+
+router.get("/sleep", (req, res) => {
+  // If the user is already logged in, redirect the request to another route
+  if (!req.session.logged_in) {
+    res.redirect("/login");
+    return;
+  }
+
+  res.render("ratings");
+});
+
+router.get("/mood", (req, res) => {
+  // If the user is already logged in, redirect the request to another route
+  if (!req.session.logged_in) {
+    res.redirect("/login");
+    return;
+  }
+
+  res.render("ratings");
 });
 
 module.exports = router;

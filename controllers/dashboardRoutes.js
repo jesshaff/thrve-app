@@ -2,7 +2,7 @@ const router = require("express").Router();
 const { User, Post } = require("../models");
 const withAuth = require("../utils/auth");
 
-// get all posts
+// get all posts + RENDER dashboard
 router.get("/", withAuth, (req, res) => {
   Post.findAll({
     where: {
@@ -17,10 +17,12 @@ router.get("/", withAuth, (req, res) => {
       },
     ],
   })
-    .then((dbPostData) => {
+
+    .then((dbPostData, userData) => {
       //serialize the data before passing to the template
       const posts = dbPostData.map((post) => post.get({ plain: true }));
-      res.render("dashboard", { posts, loggedIn: true });
+      // const user = userData.map(user);
+      res.render("dashboard", { posts, name, loggedIn: true });
     })
     .catch((err) => {
       console.log(err);
