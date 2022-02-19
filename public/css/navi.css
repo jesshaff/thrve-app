@@ -1,17 +1,13 @@
 body {
   font-family: "Yanone Kaffeesatz", sans-serif;
+  background: -webkit-linear-gradient(45deg, #ffffff 0%, #b6b6b6 100%);
 }
 body .container {
-  width: 938px;
-  position: absolute;
-  top: 50%;
-  left: 30px;
-  right: 0;
-  transform: translateY(-50%);
-  margin: auto; 
+  position:absolute;
+  transform: translateX(15%);
+  margin:45px;
 }
 body .container .card {
-  margin: 0 auto;
   display: inline-block;
   margin-right: 30px;
   transform: scale(0);

@@ -1,5 +1,5 @@
 @font-face {
-  font-family: "Roboto";
+  font-family: "Yanone Kaffeesatz", sans-serif;
   font-style: normal;
   font-weight: 400;
   src: url(https://fonts.gstatic.com/s/roboto/v29/KFOmCnqEu92Fr1Mu4mxP.ttf)
@@ -7,7 +7,7 @@
 }
 body {
   all: initial;
-  font-family: "Roboto", sans-serif;
+  font-family: "Yanone Kaffeesatz", sans-serif;
   letter-spacing: 0.02em;
 }
 * {
@@ -22,7 +22,7 @@ main {
   display: flex;
   justify-content: center;
   align-items: center;
-  background: #3f2766;
+  background: -webkit-linear-gradient(45deg, #ffffff 0%, #b6b6b6 100%);
 }
 .form {
   display: flex;
