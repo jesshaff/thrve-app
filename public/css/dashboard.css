@@ -76,7 +76,7 @@ a {
   border: none;
 }
 .header__avatar {
-  background-image: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/1609106/headshot.png");
+  background-image: url("/images/profile.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   border-radius: 50%;
@@ -98,6 +98,10 @@ a {
   transform: rotate(-45deg) translateY(-50%);
   top: 50%;
   right: -18px;
+}
+.slogan {
+  font-family: "Indie Flower", cursive;
+  color: #3f2766;
 }
 
 .dropdown {
@@ -199,7 +203,7 @@ a {
   background-color: rgba(255, 255, 255, 0.1);
 }
 .sidenav__profile-avatar {
-  background-image: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/1609106/headshot.png");
+  background-image: url("/images/profile.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   border-radius: 50%;
@@ -582,6 +586,13 @@ a {
 }
 .card--finance {
   position: relative;
+}
+
+.thrve {
+  width: 700px;
+  height: 500px;
+  margin-left: 60px;
+  margin-right: 60px;
 }
 
 .settings {
