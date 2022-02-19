@@ -81,7 +81,7 @@ router.get("/physical", async (req, res) => {
     return;
   }
 
-  res.render("ratings");
+  res.render("physical");
 });
 
 router.get("/sleep", (req, res) => {
@@ -91,7 +91,7 @@ router.get("/sleep", (req, res) => {
     return;
   }
 
-  res.render("ratings");
+  res.render("sleep");
 });
 
 router.get("/mood", (req, res) => {
@@ -101,7 +101,7 @@ router.get("/mood", (req, res) => {
     return;
   }
 
-  res.render("ratings");
+  res.render("mental");
 });
 
 module.exports = router;
