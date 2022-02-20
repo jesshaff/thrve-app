@@ -1,25 +1,33 @@
-// const DUMMY_DATA = [
-//     { id: 'd1', value: 10, region: 'USA'},
-//     { id: 'd2', value: 8, region: 'India'},
-//     { id: 'd3', value: 16, region: 'China'},
-// ];
+const DUMMY_DATA = [
+    { id: 'd1', value: 10, region: 'USA'},
+    { id: 'd2', value: 8, region: 'India'},
+    { id: 'd3', value: 16, region: 'China'},
+];
 
-// Get user rating by date for graph
-const UserMoodData = await fetch("/api/mood", {
-    method: "GET",
-    body: JSON.stringify({ date_added, rating }),
-    headers: { "Content-Type": "application/json" },
-  });
+// const moodDataExample = fetch('/seeds/moodData.json').then(function (response) {
+//   return response.json();
+// }).then(function (obj) {
+//   console.log(obj);
+// }).catch(function (error) {
+//   console.error('Something went wrong with retrieving the userData');
+// });
 
-  if (response.ok) {
-    document.location.replace("/");
-  } else {
-    alert("Failed");
-  };
+// // Get user rating by date for graph
+// const DUMMY_DATA = await fetch("/api/mood", {
+//     method: "GET",
+//     body: JSON.stringify({ date_added, rating }),
+//     headers: { "Content-Type": "application/json" },
+//   });
+
+//   if (response.ok) {
+//     document.location.replace("/");
+//   } else {
+//     alert("Failed");
+//   };
 
 const xScale = d3
     .scaleBand()
-    .domain(UserMoodData.map((dataPoint) => dataPoint.region))
+    .domain(DUMMY_DATA.map((dataPoint) => dataPoint.region))
     .rangeRound([0, 250]) // 250 is width of container in css
     .padding(0.1);  
 const yScale = d3.scaleLinear().domain([0, 20]).range([100, 0]); // 20 is the value -- a few higher than the highest value in the data ex: 16 for China
@@ -36,7 +44,7 @@ const container = d3.select('svg').classed('container', true)  // if using class
 
 const bars = container
 .selectAll('.bar')
-.data(UserMoodData)
+.data(DUMMY_DATA)
 .enter()  // data not rendered yet
 .append('rect') // append div for missing element
 .classed('bar', true)
