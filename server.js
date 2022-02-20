@@ -11,7 +11,7 @@ require("dotenv").config();
 
 // const db = require("./models");
 
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 3006;
 
 const hbs = exphbs.create({ helpers });
 
