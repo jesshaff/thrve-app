@@ -1,12 +1,12 @@
-// this calls the mood data from the server
-fetch("/api/mood")
-  .then(function (response) {
-    //the response will contain several values that we'll need to deal with here
-    return response.map.JSON(data);
-  })
-  //this .then contains the entirety of the chart, pass the response data in and use it where its needed
-  .then(function (data) {
-    console.log("Request successful", text);
+// // this calls the mood data from the server
+// fetch("/api/mood")
+//   .then(function (response) {
+//     //the response will contain several values that we'll need to deal with here
+//     return response.map.JSON(data);
+//   })
+  // //this .then contains the entirety of the chart, pass the response data in and use it where its needed
+  // .then(function (data) {
+  //   console.log("Request successful", text);
 
     var callbackError, callbackData;
 
@@ -47,7 +47,7 @@ fetch("/api/mood")
       .append("g")
       .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
-    d3.csv(".././data/data.csv"),
+    d3.csv("/data/data.csv"),
       function (error, data) {
         var AgeNames = d3.keys(data[0]).filter(function (key) {
           return key !== "State";
@@ -149,8 +149,7 @@ fetch("/api/mood")
             });
         });
       };
-  })
-  // callback function that closes out the fetch call
-  .catch(function (error) {
-    log("Request failed", error);
-  });
+  // // callback function that closes out the fetch call
+  // .catch(function (error) {
+  //   log("Request failed", error);
+  // });
