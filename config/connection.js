@@ -3,15 +3,13 @@ const Sequelize = require("sequelize");
 
 require("dotenv").config();
 
-var app = express();
-
 const sequelize = new Sequelize(
   process.env.DB_NAME,
   process.env.DB_USER,
   process.env.DB_PASSWORD,
   {
     host: "localhost",
-    dialect: "mysql",
+    dialect: "mysql2",
   }
 );
 
