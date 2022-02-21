@@ -8,6 +8,7 @@
   // .then(function (data) {
   //   console.log("Request successful", text);
 
+
     var callbackError, callbackData;
 
     var margin = { top: 20, right: 80, bottom: 30, left: 40 },
@@ -47,7 +48,7 @@
       .append("g")
       .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
-    d3.csv("/data/data.csv"),
+    d3.csv("../data/mood-data.csv"),
       function (error, data) {
         var AgeNames = d3.keys(data[0]).filter(function (key) {
           return key !== "State";

@@ -1,6 +1,6 @@
 // const fs = require('../../utils/fsUtils');
 
-const { response } = require("express");
+// const { response } = require("express");
 
 // const DUMMY_DATA = [
 //     { id: 'd1', value: 10, region: 'USA'},
@@ -26,18 +26,18 @@ const { response } = require("express");
 //   console.error('Something went wrong with retrieving the userData');
 // });
 
-// Get user rating by date for graph
-const moodDataExample = fetch("/api/mood", {
-    method: "GET",
-    body: JSON.stringify({ date_added, rating }),
-    headers: { "Content-Type": "application/json" },
-  });
+// // Get user rating by date for graph
+// const moodDataExample = fetch("/api/mood", {
+//     method: "GET",
+//     body: JSON.stringify({ date_added, rating }),
+//     headers: { "Content-Type": "application/json" },
+//   });
 
-  if (response.ok) {
-    document.location.replace("/");
-  } else {
-    alert("Failed");
-  };
+//   if (response.ok) {
+//     document.location.replace("/");
+//   } else {
+//     alert("Failed");
+//   };
 
 const xScale = d3
     .scaleBand()
