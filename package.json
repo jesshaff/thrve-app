@@ -8,6 +8,7 @@
     "express": "^4.17.3",
     "express-handlebars": "^6.0.2",
     "express-session": "^1.17.2",
+    "fs": "^0.0.1-security",
     "heroku": "^7.59.2",
     "json-2-csv": "^3.17.0",
     "mysql": "^2.18.1",
