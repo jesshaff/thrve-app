@@ -66,9 +66,3 @@ const bars = container
 .attr('height', (data) => 100 - yScale(data.value)) // function to get access to data point and make chart lines different lengths -- 100 is max range
 .attr('x', data => xScale(data.region)) // date 
 .attr('y', data => yScale(data.value)) // mood rating value 1-5
-
-// setTimeout(() => {
-//     bars.data(DUMMY_DATA.slice(0, 2)).exit().remove();
-// }, 2000);
-// ^^ The above sets the 3 data point to disappear/be removed after 2 seconds -- example - not needed
-
