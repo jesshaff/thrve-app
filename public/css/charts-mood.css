@@ -1,4 +1,4 @@
-.container {
+/* .container {
   width: 250px;
   height: 100px;
   border: 1px solid black;
@@ -6,4 +6,41 @@
 
 .bar {
   fill: rgb(171, 219, 187);
+} */
+
+body {
+  margin: 0px;
+  overflow: hidden;
+}
+
+.line-path {
+  fill: none;
+  
+  stroke-width: 5;
+  stroke-linejoin: round;
+  stroke-linecap: round;
+  mix-blend-mode: multiply;
+}
+
+text {
+  font-family: sans-serif;
+}
+
+.tick text {
+  font-size: 1.4rem;
+  fill: #635F5D;
+}
+
+.tick line {
+  stroke: #C0C0BB;
+}
+
+.axis-label {
+  font-size: 5em;
+  fill: #8E8883;
+}
+
+.title {
+  font-size: 2.7em;
+  fill: #635F5D;
 }
