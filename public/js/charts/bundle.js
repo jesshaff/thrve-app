@@ -9,7 +9,7 @@
     const render = data => {
       const title = 'Mood Ratings';
       
-      const xValue = d => d.date_added;
+      const xValue = d => new Date (d.date_added);
       const xAxisLabel = 'Date';
       const numDates = data.length
 
@@ -78,7 +78,7 @@
       
       g.append('text')
           .attr('class', 'title')
-          .attr('y', -10)
+          .attr('y', -20)
           .text(title);
     };
   
