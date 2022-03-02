@@ -7,7 +7,7 @@
     const height = +svg.attr('height');
   
     const render = data => {
-      const title = 'Daily Ratings';
+      const title = 'Mood Ratings';
       
       const xValue = d => d.date_added;
       const xAxisLabel = 'Date';

@@ -9,8 +9,8 @@ circle {
 
 .line-path {
   fill: none;
-  stroke: maroon;
-  stroke-width: 5;
+  stroke: #99fdcb;
+  stroke-width: 4;
   stroke-linejoin: round;
 }
 
@@ -19,7 +19,7 @@ text {
 }
 
 .tick text {
-  font-size: 2.7em;
+  font-size: 2.0em;
   fill: #635F5D;
 }
 
@@ -28,11 +28,11 @@ text {
 }
 
 .axis-label {
-  font-size: 5em;
-  fill: #8E8883;
+  font-size: 3em;
+  fill: #99fdcb;
 }
 
 .title {
-  font-size: 3.7em;
-  fill: #635F5D;
+  font-size: 3.0em;
+  fill: #99fdcb;
 }
