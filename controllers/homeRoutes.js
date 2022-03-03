@@ -104,4 +104,15 @@ router.get("/mood", (req, res) => {
   res.render("mental");
 });
 
+//testing chart route
+router.get("/test", (req, res) => {
+  // If the user is already logged in, redirect the request to another route
+  if (!req.session.logged_in) {
+    res.redirect("/login");
+    return;
+  }
+
+  res.render("moodChart");
+});
+
 module.exports = router;

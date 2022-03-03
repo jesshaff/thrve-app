@@ -42,8 +42,6 @@ const ratingsFormHandler = async (value) => {
       alert("Failed");
     }
   }
-  console.log(window.location.pathname);
-  console.log(response);
 };
 //Event listener on buttons to call the ratings handler function above.
 // var el = document.querySelectorAll("label");
