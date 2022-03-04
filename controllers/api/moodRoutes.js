@@ -31,7 +31,7 @@ router.post("/", async (req, res) => {
 
     let data = JSON.stringify(newMood, null, 2);
 
-    fs.appendFile(`'${req.session.user_id}-mood.json'`, data, (err) => {
+    fs.appendFile(`data/mood/${req.session.user_id}-mood.json`, data, (err) => {
       if (err) throw err;
       console.log("Data written to file");
     });
